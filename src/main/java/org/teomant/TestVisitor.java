@@ -22,7 +22,7 @@ public class TestVisitor extends HelloBaseVisitor {
 
     @Override
     public Object visitBoolExpression(HelloParser.BoolExpressionContext ctx) {
-        return visit(ctx);
+        return visit(ctx.bool());
     }
 
     @Override

@@ -8,7 +8,7 @@ import org.teomant.antlr.HelloParser;
 public class Main {
 
     public static void main(String[] args) {
-        HelloLexer lexer = new HelloLexer(CharStreams.fromString("false AND (true OR true)"));
+        HelloLexer lexer = new HelloLexer(CharStreams.fromString("FALSE AND TRUE OR TRUE"));
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         HelloParser parser = new HelloParser(tokens);
         Object result = new TestVisitor().visit(parser.parse());
